@@ -5,19 +5,30 @@ import axios from "axios";
 class Profile extends React.Component{
     state = {
         isLoading: true,
+        linkAudio: "",
         linkAvatar : "https://cdn2.iconfinder.com/data/icons/circle-avatars-1/128/050_girl_avatar_profile_woman_suit_student_officer-512.png",
         linkMeme: "https://cdn2.iconfinder.com/data/icons/circle-avatars-1/128/050_girl_avatar_profile_woman_suit_student_officer-512.png",
-        textAudio: "hello world",
-        linkAudio: ""
+        textAudio: "Indonesia tanah airku Tanah tumpah darahku Disanalah aku berdiri Jadi pandu ibuku Indonesia kebangsaanku Bangsa dan Tanah Airku Marilah kita berseru Indonesia bersatu",
+        nestedState : {
+            key1: "",
+            key2: ""
+        }
     };
     axiosVoice = async() => {
         const self = this;
+        const someProperty = {...self.state.nestedState};
         await axios
             .get(`http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&hl=en-us&src=${self.state.textAudio}`)
             .then(function(response){
                 self.setState({isLoading: false});
-                self.setState({linkAudio: `http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&hl=en-us&src=${self.state.textAudio}`});
+                self.setState({linkAudio: `http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&r=-5&zh-tw-tw&src=${self.state.textAudio}`});
                 console.warn(response, "ini response dari axiosvoice");
+                console.warn("iniiiiiiiiiiiiiiiiiiiii batas atas");
+                someProperty.key1 = "value1";
+                self.setState({nestedState: someProperty});
+                // self.setState({nestedState.key1: "value1"});
+                console.warn("ini coba edit setstate nsted state", self.state);
+                console.warn("iniiiiiiiiiiiiiiii batas bawah");
             })
             .catch(function(error){
                 self.setState({isLoading: false});
@@ -30,7 +41,6 @@ class Profile extends React.Component{
     }
     render(){
         console.warn("ini cek state", this.state.textAudio, this.state.linkAudio, "hehe")
-        // this.axiosVoice;
         return(
             <div className="container text-center">
                 <div className="row align-items-center text-center pt-5 pb-5">
