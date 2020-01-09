@@ -1,6 +1,6 @@
 import React from 'react';
 
-function ListMeme(fotoProfil, meme, publishedAt){
+function ListMeme(fotoProfil, meme, fullName, memeId, publishedAt){
     return(
         <div className="container">
             <div className="row">
@@ -10,7 +10,8 @@ function ListMeme(fotoProfil, meme, publishedAt){
                         <tr>
                             <th class="p-0">
                                 <img src={fotoProfil} style={{maxHeight:"35px"}}/>
-                                <span className="pl-2">Agung Adji N</span>
+                                <span className="pl-2">{fullName}</span>
+                                <span className="text-right">{memeId}</span>
                             </th>
                         </tr>
                     </thead>

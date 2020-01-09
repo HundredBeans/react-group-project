@@ -12,4 +12,5 @@ client.get('statuses/user_timeline', {screen_name: 'BotMarzi', count: 1},  funct
     console.log(tweet[0]['text']);  // Tweet body.
     let stringTweet = tweet[0]['text']
     console.log(stringTweet.split("--**")[1])
+    console.log(tweet)
   });
