@@ -15,7 +15,6 @@ const MainRoute = () => {
                 <Route exact path="/login" component={SignIn} />
                 <Route exact path="/profile" component={Profile} />
                 <Route exact path="/logout" component={LogOut} />
-                <Route exact path="/form-post-meme" component={FormPostMeme} />
             </Switch>
         </BrowserRouter>
     )
