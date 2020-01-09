@@ -1,33 +1,25 @@
 import createStore from 'unistore';
 
 const initialState = {
-    agung:[
-        {username:""},
-        {fotoUrl:""},
-        {fullName:""},
-        {email:""},
-        {isLogin:false}
-    ],
-    daffa:[
-        {username:""},
-        {fotoUrl:""},
-        {fullName:""},
-        {email:""},
-        {isLogin:false}
-    ],
-    hedy:[
-        {username:""},
-        {fotoUrl:""},
-        {fullName:""},
-        {email:""},
-        {isLogin:false}
-    ],
-    pipit:[
-        {username:""},
-        {fotoUrl:""},
-        {fullName:""},
-        {email:""},
-        {isLogin:false}
-    ]
+    agung:{
+        username:"",
+        fotoUrl:"",
+        fullName: ""
+    },
+    hedy:{
+        username:"",
+        fotoUrl:"",
+        fullName: ""
+    },
+    daffa:{
+        username:"",
+        fotoUrl:"",
+        fullName: ""
+    },
+    pipit:{
+        username:"",
+        fotoUrl:"",
+        fullName: ""
+    },
 }
 export const store = createStore(initialState)

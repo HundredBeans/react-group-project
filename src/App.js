@@ -2,6 +2,7 @@ import React from 'react';
 import MainRoute from './routes/main-route';
 import { Provider } from "unistore/react";
 import { store } from "./store";
+import './styles/bootstrap.min.css';
 
 
 function App() {
