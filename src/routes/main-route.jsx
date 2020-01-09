@@ -4,6 +4,7 @@ import Home from '../pages/home';
 import SignIn from '../pages/signin';
 import Profile from '../pages/profile';
 import LogOut from '../pages/logout';
+import NotMatch from '../pages/nomatch';
 
 const MainRoute = () => {
     return (
@@ -14,6 +15,7 @@ const MainRoute = () => {
                 <Route exact path="/login" component={SignIn} />
                 <Route exact path="/profile" component={Profile} />
                 <Route exact path="/logout" component={LogOut} />
+                <Route component ={NotMatch}/>
             </Switch>
         </BrowserRouter>
     )
