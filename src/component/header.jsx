@@ -35,10 +35,13 @@ class Header extends Component{
                 {/* <Search {...this.props}/> */}
                 <ul class="navbar-nav ml-lg-5">
                     <li class="nav-item">
-                        <Link to="/signin" class="nav-link">Masuk</Link>
+                        <Link to="/login" class="nav-link">Masuk</Link>
                     </li>
                     <li class="nav-item">
                         <Link to="/logout" class="nav-link"> Logout</Link>
+                    </li>
+                    <li class="nav-item">
+                        <Link to="/blank" class="nav-link"> daffa</Link>
                     </li>
                 </ul>
                 </div>
