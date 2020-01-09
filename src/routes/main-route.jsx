@@ -5,7 +5,7 @@ import SignIn from '../pages/signin';
 import Profile from '../pages/profile';
 import LogOut from '../pages/logout';
 import NotMatch from '../pages/nomatch';
-import ComingSoon from '../pages/comingsoon'
+import ComingSoon from '../pages/comingsoon';
 
 const MainRoute = () => {
     return (
