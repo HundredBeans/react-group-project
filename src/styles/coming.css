@@ -1,0 +1,32 @@
+body{
+   background-image: url('../image/alam.jpg');
+   background-size: cover;
+}
+
+.coming p{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 50px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.coming div{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 40px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.coming hr{
+    margin:auto;
+    width:30%;
+    border-width: 3px;
+    border-color: white;
+    padding-top: 10px;
+}
+
+.coming {
+    margin-top: 210px;
+}
