@@ -1,7 +1,7 @@
 import React from 'react';
 import Axios from 'axios'
 
-cosnt url = 'https://api-us.faceplusplus.com/facepp/v3/compare?api_key=sDYn4R45akhLki48Uy5xVzdqdq9qMqqK&api_secret=3jsLZXkF3HdBDEniCXCnjrOoL-ZfPuTe'
+const url = 'https://api-us.faceplusplus.com/facepp/v3/compare?api_key=sDYn4R45akhLki48Uy5xVzdqdq9qMqqK&api_secret=3jsLZXkF3HdBDEniCXCnjrOoL-ZfPuTe'
 class SignIn extends React.Component{
     handleMasukan = (e) =>{
         const self = this
@@ -9,18 +9,24 @@ class SignIn extends React.Component{
     }
     handleLogin = () =>{
         const self = this
+        if (this.props.userNameInput==='agung'){
+            const inputUrl = this.props.agung.fotoUrl
+        }
+        else if (this.props.userNameInput==='daffa'){
+            const inputUrl = this.props.daffa.fotoUrl
+        }
+        else if (this.props.userNameInput==='pipit'){
+            const inputUrl = this.props.pipit.fotoUrl
+        }
+        else if (this.props.userNameInput==='hedi'){
+            const inputUrl = this.props.hedi.fotoUrl
+        }
         Axios
-
-            .post(`${url}&image_url1=${this.props.agung}`)
+            .post(`${url}&image_url1=${inputUrl}&image_url2=${this.props.fotoUrlInput}`)
             .then(function(response){
-                if (response.data.api_key !== null){
-                    store.setState({
-                        fullname : response.data.fullname, 
-                        email : response.data.email,
-                        status_login : response.data.status_login,
-                    })
+                    store.setState({status_login : response.data.status_login})
                     self.props.history.push("/profile")
-                }
+                
             })
             .catch(function(error){
             })
