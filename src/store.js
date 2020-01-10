@@ -73,7 +73,7 @@ const initialState = {
     searchKeyword:"",
     isiArticle:"",
     judulArticle:"",
-    isLoading:false
+    isLoading:false,
     pipitIsLogin : false,
     fotoUrlInput: "",
     userNameInput: "",
