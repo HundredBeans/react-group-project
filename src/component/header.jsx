@@ -19,7 +19,7 @@ class Header extends Component{
         return(
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <Link to="/"><a class="navbar-brand" href="#"><img src={require("../logo.svg")} alt="logo" width="50px"/>WIKIPEDYA</a></Link>
+                <Link to="/"><a class="navbar-brand" href="#"><img src={"https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSoM7c7vkyn4itZ5ohFCJs0Z2QmR6JIH92DQAeX4u7LpZJZYmKJ"} alt="logo" width="40px"/>WIKIPEDYA</a></Link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
