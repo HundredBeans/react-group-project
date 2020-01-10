@@ -4,8 +4,8 @@ import "../styles/bootstrap.min.css";
 import { Link } from "react-router-dom";
 // import Search from './search';
 import { actions, store } from "../store";
-// import { withRouter } from "react-router-dom";
-// import { connect } from "unistore/react";
+import { withRouter } from "react-router-dom";
+import { connect } from "unistore/react";
 import Modal from '../component/modal'
 
 class Header extends Component{
@@ -55,4 +55,4 @@ class Header extends Component{
     }
 }
 
-export default Header;
+export default connect("agungIsLogin, daffaIsLogin, pipitIsLogin, hedyIsLogin", actions)(withRouter(Header));

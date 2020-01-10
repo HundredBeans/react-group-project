@@ -51,8 +51,8 @@ class SignIn extends React.Component{
                     })
                     alert("face didn't match")
                 }else{
-                    alert("login success")
                     self.props.history.push("/profile")               
+                    alert("login success")
                 }
             })
             .catch(function(error){
@@ -84,7 +84,7 @@ class SignIn extends React.Component{
                         <button type="submit" onClick={this.cekFoto} className="btn btn-primary btn-block" >Cek Foto</button>
                         </div>
                         <div className="col-sm-12 py-1">
-                        <button type="submit" onClick={this.handleLogin} className="btn btn-primary btn-block">Login</button>
+                        <button type="submit" onClick={this.handleLogin} className="btn btn-primary btn-block" data-dismiss="modal">Login</button>
                         </div>
                     </div>
                     {this.props.cekFotoStatus ? 
