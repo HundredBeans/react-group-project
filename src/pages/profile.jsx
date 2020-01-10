@@ -127,7 +127,8 @@ class Profile extends React.Component{
             )
         }
         else{
-            return <Redirect to={{ pathname: "/login" }} />;
+            alert("You are not logged in")
+            return <Redirect to={{ pathname: "/" }} />;
         }
     }
 }
