@@ -32,6 +32,7 @@ class WikiBody extends React.Component{
 
                             <div className="col-md-12 pt-4 pb-2">
                                 <span>Click here to get random article!</span>
+
                             </div>
                             <div className="col-md-12 mb-2">
                                 <button type="button" className="btn btn-primary" onClick={this.props.handleRandomArticle}>Random</button>                              
