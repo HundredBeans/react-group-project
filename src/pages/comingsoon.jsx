@@ -1,9 +1,17 @@
+//import plugin
 import React from 'react';
+
+//import style
 import "../styles/coming.css"
+
+//import component
+import Header from '../component/header';
+
+//c
 class ComingSoon extends React.Component{
     constructor() {
       super();
-      this.state = { time: {}, seconds: 86405 };
+      this.state = { time: {}, seconds: 5 };
       this.timer = 0;
       this.startTimer = this.startTimer.bind(this);
       this.countDown = this.countDown.bind(this);
@@ -59,10 +67,13 @@ class ComingSoon extends React.Component{
       this.startTimer()
       return(
         <div className="coming">
-          <p style={{color: "white"}}>Coming Soon</p>
-          <hr/>
-          <div style={{color:"white"}}>
-            {this.state.time.d}d {this.state.time.h}h {this.state.time.m}m {this.state.time.s}s
+          <Header/>
+          <div className="come">
+            <p className="soon" style={{color: "white"}}>Coming Soon</p>
+            <hr/>
+            <div className="cooldown" style={{color:"white"}}>
+              {this.state.time.d}d {this.state.time.h}h {this.state.time.m}m {this.state.time.s}s
+            </div>
           </div>
         </div>
       );

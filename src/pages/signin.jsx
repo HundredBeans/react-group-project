@@ -12,6 +12,7 @@ class SignIn extends React.Component{
     }
     handleLogin = () =>{
         const self = this
+        store.setState({cekFotoStatus:false})
         let inputUrl = ''
         console.log('cek usernameInput',this.props.userNameInput)
         console.log('cek agung login', this.props.agungIsLogin)
@@ -27,11 +28,13 @@ class SignIn extends React.Component{
             store.setState({daffaIsLogin : true})
         }
         else if (this.props.userNameInput==='pipit'){
-            this.inputUrl = this.props.pipit[1]
+
+            self.inputUrl = this.props.pipit[1]
             store.setState({pipitIsLogin : true})
         }
         else if (this.props.userNameInput==='hedy'){
-            this.inputUrl = this.props.hedy[1]
+            self.inputUrl = this.props.hedy[1]
+
             store.setState({hedyIsLogin : true})
         }
         console.log('cekLogin', this.props.agungIsLogin)
@@ -46,13 +49,19 @@ class SignIn extends React.Component{
                         pipitIsLogin : false,
                         hedyIsLogin : false,
                     })
+                    alert("face didn't match")
                 }else{
                     self.props.history.push("/profile")               
+                    alert("login success")
                 }
             })
             .catch(function(error){
+                alert("login failed")
             })
 
+    }
+    cekFoto = () => {
+        store.setState({cekFotoStatus:true})
     }
     render(){
         return(
@@ -71,14 +80,22 @@ class SignIn extends React.Component{
                         </div>
                     </div>
                     <div className="form-group row">
-                        <div className="col-sm-10">
-                        <button type="submit" onClick={this.handleLogin} className="btn btn-primary">Login</button>
+                        <div className="col-sm-12">
+                        <button type="submit" onClick={this.cekFoto} className="btn btn-primary btn-block" >Cek Foto</button>
+                        </div>
+                        <div className="col-sm-12 py-1">
+                        <button type="submit" onClick={this.handleLogin} className="btn btn-primary btn-block" data-dismiss="modal">Login</button>
                         </div>
                     </div>
+                    {this.props.cekFotoStatus ? 
+                    (<div className="col-sm-12">
+                        <img src={this.props.fotoUrlInput} width={"100%"}/>
+                    </div>) : (<div></div>)
+                    }
                 </form>
             </div>
         )
     }
 }
-export default connect('agung, daffa, hedy, pipit, userNameInput, fotoUrlInput, agungIsLogin, daffaIsLogin, hedyIsLogin, pipitIsLogin'
+export default connect('agung, daffa, hedy, pipit, userNameInput, fotoUrlInput, agungIsLogin, daffaIsLogin, hedyIsLogin, pipitIsLogin, cekFotoStatus'
 )(withRouter(SignIn))
