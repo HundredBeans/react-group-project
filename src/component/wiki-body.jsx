@@ -8,8 +8,16 @@ class WikiBody extends React.Component{
         return(
             <div className="container">
                 <div className="row">
-                    <div className="col-md-12 py-2">
+                    <div className="col-md-11 py-2">
                         <h1 style={{fontWeight:"bold"}}>WIKIPEDYA</h1>
+                    </div>
+                    <div className="col-md-1 py-2">
+                        <button className="btn btn-danger" onClick={this.props.getRandomJoke}>GetJoke</button>
+                        <div>
+                            <audio src={this.props.linkAudio} className="myAudio">
+                                <source src="" type="audio/wav"/>
+                            </audio>
+                        </div>  
                     </div>
                 </div>
                 <div className="row">
@@ -21,24 +29,19 @@ class WikiBody extends React.Component{
                 <div className="row py-1">
                     <div className="col-md-6 text-center border-right border-bottom border-left">
                         <div className="row">
-                            <div className="col-md-12">
-                                <span>Click here to get random article!</span>                          </div>
+
+                            <div className="col-md-12 pt-4 pb-2">
+                                <span>Click here to get random article!</span>
+                            </div>
                             <div className="col-md-12 mb-2">
-                                <button type="button" class="btn btn-light" onClick={this.props.handleRandomArticle}>Random</button>
-                                <div>
-                                    <audio src={this.props.linkAudio} className="myAudio">
-                                        <source src="" type="audio/wav"/>
-                                    </audio>
-                                </div>
-                                
-                            </div> 
+                                <button type="button" className="btn btn-primary" onClick={this.props.handleRandomArticle}>Random</button>                              
+                            </div>
+                            <div className="col-md-12 pt-4 pb-2">
+                                <span>Click here to show article!</span>
+                            </div>
+
                             <div className="col-md-12 mb-3">
-                                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">Show Article</button>
-                                <div>
-                                    <audio src={this.props.linkAudio} className="myAudio">
-                                        <source src="" type="audio/wav"/>
-                                    </audio>
-                                </div>
+                                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Show Article</button>
                             </div>
                         </div>
                     </div>

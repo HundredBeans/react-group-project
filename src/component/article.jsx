@@ -42,6 +42,8 @@ class Article extends React.Component{
                     </div>
                     </div>
                 </div>
+            </div>
+            <div className="container">
                 <div className="row">
                     <div className="col-md-12">
                         <p>
@@ -49,9 +51,6 @@ class Article extends React.Component{
                         </p>
                         <p>
                             {this.props.textAudio}
-                        </p>
-                        <p>
-                            {this.props.linkAudio}
                         </p>
                     </div>
                 </div>
