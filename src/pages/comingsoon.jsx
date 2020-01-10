@@ -7,8 +7,9 @@ import "../styles/coming.css"
 //import component
 import Header from '../component/header';
 
-//c
+// untuk mengembalikan respon saat fitur belum siap untuk di execute
 class ComingSoon extends React.Component{
+    // class konstraktor untuk state lokal
     constructor() {
       super();
       this.state = { time: {}, seconds: 5 };
@@ -16,7 +17,7 @@ class ComingSoon extends React.Component{
       this.startTimer = this.startTimer.bind(this);
       this.countDown = this.countDown.bind(this);
     }
-  
+    // class logic matematika terhadap waktu
     secondsToTime = (secs) => {
       var days = Math.floor(secs / (60 * 60 * 24));
 
