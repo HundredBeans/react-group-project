@@ -24,23 +24,23 @@ class Profile extends React.Component{
     componentDidMount = () => {
         this.assignProfile();
     };
-    axiosVoice = async() => {
-        const self = this;
-        await axios
-            .get(`http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&hl=en-us&src=${store.state.textAudio}`)
-            .then(function(response){
-                store.setState({isLoading: false});
-                store.setState({linkAudio: `http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&r=-5&zh-tw-tw&src=${store.state.textAudio}`});
-            })
-            .catch(function(error){
-                store.setState({isLoading: false});
-            });
-        return this.playAudio();
-    }
-    playAudio() {
-        const audioEl = document.getElementsByClassName("myAudio")[0]
-        audioEl.play()
-    }
+    // axiosVoice = async() => {
+    //     const self = this;
+    //     await axios
+    //         .get(`http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&hl=en-us&src=${store.state.textAudio}`)
+    //         .then(function(response){
+    //             store.setState({isLoading: false});
+    //             store.setState({linkAudio: `http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&r=-5&zh-tw-tw&src=${store.state.textAudio}`});
+    //         })
+    //         .catch(function(error){
+    //             store.setState({isLoading: false});
+    //         });
+    //     return this.playAudio();
+    // }
+    // playAudio() {
+    //     const audioEl = document.getElementsByClassName("myAudio")[0]
+    //     audioEl.play()
+    // }
     render(){
         console.warn("ini cek state", this.props.textAudio, this.props.linkAudio, "hehe")
         if (this.props.agungIsLogin===true || this.props.daffaIsLogin===true || this.props.hedyIsLogin===true || this.props.pipitIsLogin===true){
@@ -107,7 +107,7 @@ class Profile extends React.Component{
                                 </div>
                             </div>
                         </div>
-                        <div className="row align-items-center">
+                        {/* <div className="row align-items-center">
                             <div className="col-md-12 text-center">
                                 <div className="pt-5 pb-5">
                                     <p> Voice </p>
@@ -121,13 +121,14 @@ class Profile extends React.Component{
                                     </audio>
                                 </div>
                             </div>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             )
         }
         else{
-            return <Redirect to={{ pathname: "/login" }} />;
+            alert("You are not logged in")
+            return <Redirect to={{ pathname: "/" }} />;
         }
     }
 }

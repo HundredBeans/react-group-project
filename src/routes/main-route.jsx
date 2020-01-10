@@ -12,7 +12,6 @@ const MainRoute = () => {
         <BrowserRouter>
             <Switch>
                 <Route exact path="/" component={Home} />
-                <Route exact path="/login" component={SignIn} />
                 <Route exact path="/profile" component={Profile} />
                 <Route exact path="/logout" component={LogOut} />
                 <Route exact path="/blank" component={ComingSoon} />
