@@ -18,7 +18,7 @@ class Header extends Component{
         return(
             <header>
                 <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <Link to="/"><a class="navbar-brand" href="#" onClick={() => this.props.clickFunction("")}><img src={require("../logo.svg")} alt="logo" width="50px"/>MEME'gram</a></Link>
+                <Link to="/"><a class="navbar-brand" href="#"><img src={require("../logo.svg")} alt="logo" width="50px"/>MEME'gram</a></Link>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -35,13 +35,15 @@ class Header extends Component{
                 </ul>
                 {/* <Search {...this.props}/> */}
                 <ul class="navbar-nav ml-lg-5">
-                    <li class="nav-item">
+                  {this.props.agungIsLogin | this.props.hedyIsLogin | this.props.daffaIsLogin | this.props.pipitIsLogin ?
+                    (<li class="nav-item">
+                        <Link to="/logout" class="nav-link"> Logout</Link>
+                    </li>) : 
+                    (<li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" type='button'>Login</a>
                         <Modal/>
-                    </li>
-                    <li class="nav-item">
-                        <Link to="/logout" class="nav-link"> Logout</Link>
-                    </li>
+                    </li>)
+                  }
                     <li class="nav-item">
                         <Link to="/blank" class="nav-link"> daffa</Link>
                     </li>
