@@ -1,7 +1,10 @@
 import React from 'react';
-
+import {store, actions} from '../store';
+import {withRouter, Redirect} from 'react-router-dom';
+import {connect} from 'unistore/react';
 class WikiBody extends React.Component{
     render(){
+        console.log("iiniiiiiii  dari wikibody", this.props)
         return(
             <div className="container">
                 <div className="row">
@@ -20,13 +23,23 @@ class WikiBody extends React.Component{
                         <div className="row">
                             <div className="col-md-12">
                                 <span>Click here to get random article!</span>
-                            </div>
+<!--                             </div>
                             <div className="col-md-12 mb-2">
                                 <button type="button" class="btn btn-light" onClick={this.props.handleRandomArticle}>Random</button>
+                                <div>
+                                    <audio src={this.props.linkAudio} className="myAudio">
+                                        <source src="" type="audio/wav"/>
+                                    </audio>
+                                </div>
                                 
-                            </div>
+                            </div> -->
                             <div className="col-md-12 mb-3">
                                 <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">Show Article</button>
+                                <div>
+                                    <audio src={this.props.linkAudio} className="myAudio">
+                                        <source src="" type="audio/wav"/>
+                                    </audio>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -59,4 +72,6 @@ class WikiBody extends React.Component{
         )
     }
 }
-export default WikiBody;
+// export default WikiBody;
+export default connect('linkAudio, textAudio', actions
+)(withRouter(WikiBody));

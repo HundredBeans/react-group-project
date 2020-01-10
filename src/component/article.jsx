@@ -42,6 +42,19 @@ class Article extends React.Component{
                     </div>
                     </div>
                 </div>
+                <div className="row">
+                    <div className="col-md-12">
+                        <p>
+                            Joke:
+                        </p>
+                        <p>
+                            {this.props.textAudio}
+                        </p>
+                        <p>
+                            {this.props.linkAudio}
+                        </p>
+                    </div>
+                </div>
             </div>
 
         </React.Fragment>
