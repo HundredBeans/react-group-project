@@ -29,6 +29,7 @@ class WikiBody extends React.Component{
                 <div className="row py-1">
                     <div className="col-md-6 text-center border-right border-bottom border-left">
                         <div className="row">
+
                             <div className="col-md-12 pt-4 pb-2">
                                 <span>Click here to get random article!</span>
                             </div>
@@ -38,6 +39,7 @@ class WikiBody extends React.Component{
                             <div className="col-md-12 pt-4 pb-2">
                                 <span>Click here to show article!</span>
                             </div>
+
                             <div className="col-md-12 mb-3">
                                 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">Show Article</button>
                             </div>
