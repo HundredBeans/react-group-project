@@ -35,13 +35,15 @@ class Header extends Component{
                 </ul>
                 {/* <Search {...this.props}/> */}
                 <ul class="navbar-nav ml-lg-5">
-                    <li class="nav-item">
+                  {this.props.agungIsLogin | this.props.hedyIsLogin | this.props.daffaIsLogin | this.props.pipitIsLogin ?
+                    (<li class="nav-item">
+                        <Link to="/logout" class="nav-link"> Logout</Link>
+                    </li>) : 
+                    (<li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" type='button'>Login</a>
                         <Modal/>
-                    </li>
-                    <li class="nav-item">
-                        <Link to="/logout" class="nav-link"> Logout</Link>
-                    </li>
+                    </li>)
+                  }
                     <li class="nav-item">
                         <Link to="/blank" class="nav-link"> daffa</Link>
                     </li>

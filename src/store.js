@@ -70,13 +70,14 @@ const initialState = {
         "--**pipit",
         false
     ],
+    pipitIsLogin : false,
     searchKeyword:"",
     isiArticle:"",
     judulArticle:"",
-    isLoading:false
-    pipitIsLogin : false,
     fotoUrlInput: "",
     userNameInput: "",
+    isLoading:false,
+    cekFotoStatus: false
 }
 
 export const store = createStore(initialState)
