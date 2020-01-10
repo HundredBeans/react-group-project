@@ -2,6 +2,38 @@ import createStore from 'unistore';
 import { string } from 'prop-types';
 import Axios from 'axios';
 
+// const initialState = {
+//     agung:{
+//         username:"agung",
+//         fotoUrl:"https://i.ibb.co/5nQKgBC/Agung.png",
+//         fullName:"",
+//         email:"",
+//         isLogin:false
+//     },
+//     daffa:{
+//         username:"daffa",
+//         fotoUrl:"https://i.ibb.co/HqkGnsZ/Daffa.png",
+//         fullName:"",
+//         email:"",
+//         isLogin:false
+//     },
+//     hedy:{
+//         username:"hedy",
+//         fotoUrl:"https://i.ibb.co/5x2LtM3/Hedi.png",
+//         fullName:"",
+//         email:"",
+//         isLogin:false
+//     },
+//     pipit:{
+//         username:"pipit",
+//         fotoUrl:"https://i.ibb.co/5jK4kWg/Pipit.png",
+//         fullName:"",
+//         email:"",
+//         isLogin:false
+//     },
+//     fotoUrlInput : '',
+//     userNameInput : ''
+// }
 const initialState = {
     agung:[
         "agung",
@@ -11,6 +43,7 @@ const initialState = {
         "--**agung",
         false
     ],
+    agungIsLogin : false,
     hedy:[
         "hedy",
         "https://i.ibb.co/5x2LtM3/Hedi.png",
@@ -19,6 +52,7 @@ const initialState = {
         "--**hedy",
         false
     ],
+    hedyIsLogin : false,
     daffa:[
         "daffa",
         "https://i.ibb.co/HqkGnsZ/Daffa.png",
@@ -27,6 +61,7 @@ const initialState = {
         "--**daffa",
         false
     ],
+    daffaIsLogin : false,
     pipit:[
         "pipit",
         "https://i.ibb.co/5jK4kWg/Pipit.png",
@@ -39,6 +74,9 @@ const initialState = {
     isiArticle:"",
     judulArticle:"",
     isLoading:false
+    pipitIsLogin : false,
+    fotoUrlInput: "",
+    userNameInput: "",
 }
 
 export const store = createStore(initialState)
