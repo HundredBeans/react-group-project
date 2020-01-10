@@ -10,14 +10,10 @@ import { actions, store } from "../store";
 class Home extends React.Component{
     handleSearchKeyword = async e => {
         await store.setState({searchKeyword:e.target.value})
+        this.props.getArticle(this.props.searchKeyword)
         console.log(this.props.searchKeyword)
         console.log(e.target)
         }
-    searchKeyword = () => {
-        this.props.getArticle(this.props.searchKeyword)
-        console.log(this.props.isiArticle)
-        console.log(this.props.judulArticle)
-    }
     handleRandomArticle = () => {
         this.props.getRandomArticle()
     }
@@ -29,11 +25,11 @@ class Home extends React.Component{
                 handleSearchKeyword={e => this.handleSearchKeyword(e)}
                 handleRandomArticle={this.handleRandomArticle}
                 searchKeyword={this.searchKeyword}
-                />{this.props.isLoading ? <div className="text-center">Loading...</div> :
-                (<Article 
+                />
+                <Article 
                 isiArticle={this.props.isiArticle}
                 judulArticle={this.props.judulArticle} 
-                />)}
+                />
             </body>
         )
     }
