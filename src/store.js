@@ -77,7 +77,7 @@ const initialState = {
     fotoUrlInput: "",
     userNameInput: "",
     isLoading:false,
-    cekFotoStatus: false
+    cekFotoStatus: false,
     linkAudio: "",
     fullName : "",
     textAudio: "Indonesia",
