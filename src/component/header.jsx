@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import { actions, store } from "../store";
 // import { withRouter } from "react-router-dom";
 // import { connect } from "unistore/react";
+import Modal from '../component/modal'
 
 class Header extends Component{
     postSignout = () => {
@@ -35,7 +36,8 @@ class Header extends Component{
                 {/* <Search {...this.props}/> */}
                 <ul class="navbar-nav ml-lg-5">
                     <li class="nav-item">
-                        <Link to="/login" class="nav-link">Masuk</Link>
+                        <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" type='button'>Login</a>
+                        <Modal/>
                     </li>
                     <li class="nav-item">
                         <Link to="/logout" class="nav-link"> Logout</Link>
