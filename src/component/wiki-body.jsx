@@ -52,8 +52,6 @@ class WikiBody extends React.Component{
                                 <span>Search here to search for article!</span>
                             </div>
                             <div className="col-md-12">
-                                {/* <input class="form-control" type="text" placeholder="Search" aria-label="Search" onChange={(e) => this.props.handleSearchKeyword(e)}/>
-                                <button type="button" class="btn btn-light" onClick={this.props.searchKeyword}>Search</button> */}
                                 <form class="form text-center">
                                 <input 
                                     class="form-group text-center" 

@@ -42,21 +42,6 @@ class Home extends React.Component{
             })
         this.playAudio();
     }
-    // axiosVoice = async() => {
-    //     const self = this;
-    //     const audio = "http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&hl=en-us&src="+this.props.textAudio;
-    //     console.log("ini dari axiosvoice", audio);
-    //     await Axios
-    //         .get(`http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&hl=en-us&src=${this.props.textAudio}`)
-    //         .then(function(response){
-    //             store.setState({isLoading: false});
-    //             store.setState({linkAudio: audio});
-    //         })
-    //         .catch(function(error){
-    //             store.setState({isLoading: false});
-    //         });
-    //     return this.playAudio();
-    // }
     playAudio() {
         const audioEl = document.getElementsByClassName("myAudio")[0]
         audioEl.play()
@@ -71,14 +56,14 @@ class Home extends React.Component{
                     handleRandomArticle={this.handleRandomArticle}
                     searchKeyword={this.searchKeyword}
                     getRandomJoke={this.getRandomJoke}
-                />{this.props.isLoading ? <div className="text-center">Loading...</div> :
-                (<Article 
+                />
+                <Article 
                     isiArticle={this.props.isiArticle}
                     judulArticle={this.props.judulArticle} 
                     textAudio={this.props.textAudio}
                     linkAudio={this.props.linkAudio}
                     getRandomJoke={this.getRandomJoke}
-                />)}
+                />
             </body>
         )
     }
