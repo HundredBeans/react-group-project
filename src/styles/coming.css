@@ -1,9 +1,10 @@
-body{
+body .coming{
    background-image: url('../image/alam.jpg');
    background-size: cover;
+   background-attachment: fixed;
 }
 
-.coming p{
+.come .soon{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 50px;
@@ -11,7 +12,7 @@ body{
     margin: auto;
 }
 
-.coming div{
+.come .cooldown{
     text-align: center;
     font-family: 'Courier New', Courier, monospace;
     font-size: 40px;
@@ -19,14 +20,25 @@ body{
     margin: auto;
 }
 
-.coming hr{
+.come hr{
     margin:auto;
     width:30%;
     border-width: 3px;
     border-color: white;
-    padding-top: 10px;
+    padding-top: 1%;
 }
 
-.coming {
-    margin-top: 210px;
+.come {
+    margin-top: 16.7%;
+    padding-bottom: 16%;
+}
+@media only screen and (max-width: 767px) {
+    body .coming{
+        background-image: url('../image/alam.jpg');
+        background-size: cover;
+    }
+    .come {
+        margin-top: 100.7%;
+        padding-bottom: 100%;
+    }
 }
