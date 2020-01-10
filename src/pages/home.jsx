@@ -77,6 +77,7 @@ class Home extends React.Component{
                     judulArticle={this.props.judulArticle} 
                     textAudio={this.props.textAudio}
                     linkAudio={this.props.linkAudio}
+                    getRandomJoke={this.getRandomJoke}
                 />)}
             </body>
         )
