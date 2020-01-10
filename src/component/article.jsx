@@ -12,9 +12,9 @@ class Article extends React.Component{
             </button> */}
 
             {/* <!-- Modal --> */}
-            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >
                 <div className="modal-dialog modal-lg" role="document">
-                    <div clasName="modal-content">
+                    <div clasName="modal-content" style={{backgroundColor:"#F7F7F7"}}>
                     <div className="modal-header">
                         <h5 className="modal-title" id="exampleModalLongTitle">Article</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
