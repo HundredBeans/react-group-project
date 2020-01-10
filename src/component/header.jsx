@@ -36,9 +36,13 @@ class Header extends Component{
                 {/* <Search {...this.props}/> */}
                 <ul class="navbar-nav ml-lg-5">
                   {this.props.agungIsLogin | this.props.hedyIsLogin | this.props.daffaIsLogin | this.props.pipitIsLogin ?
-                    (<li class="nav-item">
+                    (<React.Fragment>
+                    <li class="nav-item">
+                        <a className="nav-link">Hello, {this.props.userNameInput} |</a>
+                    </li>
+                    <li class="nav-item">
                         <Link to="/logout" class="nav-link"> Logout</Link>
-                    </li>) : 
+                    </li></React.Fragment>) : 
                     (<li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" type='button'>Login</a>
                         <Modal/>
@@ -55,4 +59,4 @@ class Header extends Component{
     }
 }
 
-export default connect("agungIsLogin, daffaIsLogin, pipitIsLogin, hedyIsLogin", actions)(withRouter(Header));
+export default connect("agungIsLogin, daffaIsLogin, pipitIsLogin, hedyIsLogin, userNameInput", actions)(withRouter(Header));
