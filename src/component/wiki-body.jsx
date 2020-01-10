@@ -23,9 +23,18 @@ class WikiBody extends React.Component{
                         <div className="row">
                             <div className="col-md-12">
                                 <span>Click here to get random article!</span>
-                            </div>
-                            <div className="col-md-12">
+<!--                             </div>
+                            <div className="col-md-12 mb-2">
                                 <button type="button" class="btn btn-light" onClick={this.props.handleRandomArticle}>Random</button>
+                                <div>
+                                    <audio src={this.props.linkAudio} className="myAudio">
+                                        <source src="" type="audio/wav"/>
+                                    </audio>
+                                </div>
+                                
+                            </div> -->
+                            <div className="col-md-12 mb-3">
+                                <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">Show Article</button>
                                 <div>
                                     <audio src={this.props.linkAudio} className="myAudio">
                                         <source src="" type="audio/wav"/>
@@ -50,9 +59,9 @@ class WikiBody extends React.Component{
                                     aria-label="Search" 
                                     onChange={(e) => this.props.handleSearchKeyword(e)}
                                 />
-                                <button type="button" class="btn btn-light" onClick={this.props.searchKeyword}>
-                                    <i class="fa fa-fw fa-search" onClick={this.props.searchKeyword}></i>
-                                </button>
+                                    <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">
+                                        <i class="fa fa-fw fa-search" ></i>
+                                    </button>
                                 </form>
                             </div>
                         </div>

@@ -11,6 +11,7 @@ import Axios from 'axios';
 class Home extends React.Component{
     handleSearchKeyword = async e => {
         await store.setState({searchKeyword:e.target.value})
+        this.props.getArticle(this.props.searchKeyword)
         console.log(this.props.searchKeyword)
         console.log(e.target)
         }
