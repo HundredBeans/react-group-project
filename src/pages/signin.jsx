@@ -27,11 +27,11 @@ class SignIn extends React.Component{
             store.setState({daffaIsLogin : true})
         }
         else if (this.props.userNameInput==='pipit'){
-            this.inputUrl = this.props.pipit.fotoUrl
+            this.inputUrl = this.props.pipit[1]
             store.setState({pipitIsLogin : true})
         }
         else if (this.props.userNameInput==='hedy'){
-            this.inputUrl = this.props.hedy.fotoUrl
+            this.inputUrl = this.props.hedy[1]
             store.setState({hedyIsLogin : true})
         }
         console.log('cekLogin', this.props.agungIsLogin)
