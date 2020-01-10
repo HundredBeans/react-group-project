@@ -127,7 +127,7 @@ class Profile extends React.Component{
             )
         }
         else{
-            return <Redirect to={{ pathname: "/login" }} />;
+            return <Redirect to={{ pathname: "/" }} />;
         }
     }
 }
