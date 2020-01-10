@@ -78,8 +78,11 @@ const initialState = {
     userNameInput: "",
     isLoading:false,
     cekFotoStatus: false
-}
-
+    linkAudio: "",
+    fullName : "",
+    textAudio: "Indonesia",
+    
+};
 export const store = createStore(initialState)
 
 export const actions = store => ({
