@@ -12,6 +12,7 @@ class SignIn extends React.Component{
     }
     handleLogin = () =>{
         const self = this
+        store.setState({cekFotoStatus:false})
         let inputUrl = ''
         console.log('cek usernameInput',this.props.userNameInput)
         console.log('cek agung login', this.props.agungIsLogin)
@@ -46,13 +47,19 @@ class SignIn extends React.Component{
                         pipitIsLogin : false,
                         hedyIsLogin : false,
                     })
+                    alert("face didn't match")
                 }else{
+                    alert("login success")
                     self.props.history.push("/profile")               
                 }
             })
             .catch(function(error){
+                alert("login failed")
             })
 
+    }
+    cekFoto = () => {
+        store.setState({cekFotoStatus:true})
     }
     render(){
         return(
@@ -71,14 +78,22 @@ class SignIn extends React.Component{
                         </div>
                     </div>
                     <div className="form-group row">
-                        <div className="col-sm-10">
-                        <button type="submit" onClick={this.handleLogin} className="btn btn-primary">Login</button>
+                        <div className="col-sm-12">
+                        <button type="submit" onClick={this.cekFoto} className="btn btn-primary btn-block" >Cek Foto</button>
+                        </div>
+                        <div className="col-sm-12 py-1">
+                        <button type="submit" onClick={this.handleLogin} className="btn btn-primary btn-block">Login</button>
                         </div>
                     </div>
+                    {this.props.cekFotoStatus ? 
+                    (<div className="col-sm-12">
+                        <img src={this.props.fotoUrlInput} width={"100%"}/>
+                    </div>) : (<div></div>)
+                    }
                 </form>
             </div>
         )
     }
 }
-export default connect('agung, daffa, hedy, pipit, userNameInput, fotoUrlInput, agungIsLogin, daffaIsLogin, hedyIsLogin, pipitIsLogin'
+export default connect('agung, daffa, hedy, pipit, userNameInput, fotoUrlInput, agungIsLogin, daffaIsLogin, hedyIsLogin, pipitIsLogin, cekFotoStatus'
 )(withRouter(SignIn))
