@@ -10,7 +10,8 @@ import Modal from '../component/modal'
 
 class Header extends Component{
     postSignout = () => {
-        store.setState({"is_login": false});
+        store.setState({"agungIsLogin": false, "pipitIsLogin": false, "hedyIsLogin": false, "daffaIsLogin": false});
+        alert("logout succses!!!")
         // localStorage.clear()
         this.props.history.push("/");
     };
@@ -32,6 +33,9 @@ class Header extends Component{
                     <li class="nav-item">
                         <Link to="/profile" class="nav-link">Profile</Link>
                     </li>
+                    <li class="nav-item">
+                        <Link to="/blank" class="nav-link"> Post Article</Link>
+                    </li>
                 </ul>
                 {/* <Search {...this.props}/> */}
                 <ul class="navbar-nav ml-lg-5">
@@ -44,9 +48,6 @@ class Header extends Component{
                         <Modal/>
                     </li>)
                   }
-                    <li class="nav-item">
-                        <Link to="/blank" class="nav-link"> daffa</Link>
-                    </li>
                 </ul>
                 </div>
             </nav> 

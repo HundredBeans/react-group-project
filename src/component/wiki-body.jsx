@@ -23,7 +23,7 @@ class WikiBody extends React.Component{
                         <div className="row">
                             <div className="col-md-12">
                                 <span>Click here to get random article!</span>
-<!--                             </div>
+                             </div>
                             <div className="col-md-12 mb-2">
                                 <button type="button" class="btn btn-light" onClick={this.props.handleRandomArticle}>Random</button>
                                 <div>
@@ -32,7 +32,7 @@ class WikiBody extends React.Component{
                                     </audio>
                                 </div>
                                 
-                            </div> -->
+                            </div>
                             <div className="col-md-12 mb-3">
                                 <button type="button" class="btn btn-light" data-toggle="modal" data-target="#exampleModalLong">Show Article</button>
                                 <div>
