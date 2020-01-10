@@ -22,7 +22,7 @@ class Home extends React.Component{
     }
     handleRandomArticle = async() => {
         this.props.getRandomArticle();
-        await this.getRandomJoke();
+        // await this.getRandomJoke();
         console.log("iiiiiiinnnnnnnniiiiiiii fungsi random article", this.props.textAudio);
     }
     getRandomJoke = async () => {
@@ -31,6 +31,7 @@ class Home extends React.Component{
         await Axios
             .get("https://sv443.net/jokeapi/category/programming")
             .then(function(response){
+                store.setState({isLoading: false})
                 store.setState({textAudio:response.data.joke})
                 store.setState({linkAudio:`http://api.voicerss.org/?key=1b382e51653b4956ae35f117746377cd&hl=en-us&src=${response.data.joke}`})
             })
@@ -69,13 +70,14 @@ class Home extends React.Component{
                     handleSearchKeyword={e => this.handleSearchKeyword(e)}
                     handleRandomArticle={this.handleRandomArticle}
                     searchKeyword={this.searchKeyword}
-                    // getRandomJoke={this.getRandomJoke}
+                    getRandomJoke={this.getRandomJoke}
                 />{this.props.isLoading ? <div className="text-center">Loading...</div> :
                 (<Article 
                     isiArticle={this.props.isiArticle}
                     judulArticle={this.props.judulArticle} 
                     textAudio={this.props.textAudio}
                     linkAudio={this.props.linkAudio}
+                    getRandomJoke={this.getRandomJoke}
                 />)}
             </body>
         )
