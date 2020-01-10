@@ -4,11 +4,6 @@ import SignIn from '../pages/signin'
 class Modal extends React.Component{
     render(){
         return(
-            // <!-- Button trigger modal -->
-            // <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
-            // Launch demo modal
-            // </button>
-
             // <!-- Modal -->
             <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
@@ -22,10 +17,6 @@ class Modal extends React.Component{
                 <div class="modal-body">
                     <SignIn/>
                 </div>
-                {/* <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
-                </div> */}
                 </div>
             </div>
             </div>

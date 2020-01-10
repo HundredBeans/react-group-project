@@ -6,15 +6,9 @@ class Article extends React.Component{
     render(){
         return(
             <React.Fragment>
-            {/* <!-- Button trigger modal --> */}
-            {/* <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-            Launch demo modal
-            </button> */}
-
-            {/* <!-- Modal --> */}
-            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" >
                 <div className="modal-dialog modal-lg" role="document">
-                    <div clasName="modal-content">
+                    <div clasName="modal-content" style={{backgroundColor:"#F7F7F7"}}>
                     <div className="modal-header">
                         <h5 className="modal-title" id="exampleModalLongTitle">Article</h5>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
@@ -40,6 +34,18 @@ class Article extends React.Component{
                     <div className="modal-footer">
                         <button type="button" className="btn btn-secondary" data-dismiss="modal">Close</button>
                     </div>
+                    </div>
+                </div>
+            </div>
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-12">
+                        <p>
+                            Joke:
+                        </p>
+                        <p>
+                            {this.props.textAudio}
+                        </p>
                     </div>
                 </div>
             </div>
