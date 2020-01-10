@@ -41,7 +41,7 @@ class Header extends Component{
                 <ul class="navbar-nav ml-lg-5">
                   {this.props.agungIsLogin | this.props.hedyIsLogin | this.props.daffaIsLogin | this.props.pipitIsLogin ?
                     (<li class="nav-item">
-                        <Link to="/logout" class="nav-link"> Logout</Link>
+                        <Link onClick={this.postSignout}>Logout</Link>
                     </li>) : 
                     (<li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" type='button'>Login</a>
