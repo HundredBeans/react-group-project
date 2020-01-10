@@ -77,8 +77,13 @@ const initialState = {
     pipitIsLogin : false,
     fotoUrlInput: "",
     userNameInput: "",
-}
-
+    listMeme: [],
+    isLoading: true,
+    linkAudio: "",
+    fullName : "",
+    textAudio: "Indonesia",
+    
+};
 export const store = createStore(initialState)
 
 export const actions = store => ({
