@@ -44,10 +44,9 @@ class Header extends Component{
                     <li class="nav-item">
                         <a className="nav-link">Hello, {this.props.userNameInput} |</a>
                     </li>
-                    (<li class="nav-item">
-                        <Link onClick={this.postSignout}>Logout</Link>
-                    </li>)/React.Fragment>)
-
+                    <li class="nav-item">
+                        <Link class="nav-link" onClick={this.postSignout}>Logout</Link>
+                    </li></React.Fragment>):
                     (<li class="nav-item">
                         <a class="nav-link" data-toggle="modal" data-target="#exampleModalCenter" type='button'>Login</a>
                         <Modal/>
